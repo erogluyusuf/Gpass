@@ -102,7 +102,7 @@ function check_and_install_tools() {
     DISTRO=$(grep ^ID= /etc/os-release | cut -d'=' -f2 | tr -d '"')
 
     # Dağıtıma göre uygun komutu seç
-    if [[ "$DISTRO" == "ubuntu" || "$DISTRO" == "debian" ]]; then
+    if [[ "$DISTRO" == "ubuntu" || "$DISTRO" == "debian" || "$DISTRO" == "kali" ]]; then
         if ! command -v xclip &> /dev/null; then
             sudo apt update && sudo apt install -y xclip
             if [ $? -eq 0 ]; then
@@ -165,6 +165,7 @@ function check_and_install_tools() {
         exit 1
     fi
 }
+
 
 # Parametreleri oku
 while [[ "$#" -gt 0 ]]; do
