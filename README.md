@@ -1,3 +1,6 @@
+![gpassLogo](https://github.com/erogluyusuf/Gpass/blob/main/gpass.png)
+
+
 # Gpass
 
 
